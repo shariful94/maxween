@@ -3,7 +3,7 @@
 @section('content')
 <header>
     <div>
-        <img src="{{url('assets/img/111.jpg')}}" alt="Company Background Image" class="w-100">
+        <img src="{{url('assets/img/Meeting-Room-Office-Wall-Logo-Mockup-Design.jpg')}}" alt="Company Background Image" class="w-100">
     </div>
 </header>
 
