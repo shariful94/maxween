@@ -23,7 +23,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
-Route::get('/product', [ProductController::class, 'index']);
+Route::get('/products', [HomeController::class, 'product']);
+Route::get('/productdetails', [HomeController::class, 'productdetails']);
 
 //admin group
 Route::middleware(['auth'])->group(function () {
