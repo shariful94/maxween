@@ -27,7 +27,7 @@
     <nav id="scrollspy" class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix"
         data-offset-top="20">
         <div class="container">
-            <a class="navbar-brand" href="{{url('/')}}"> <h2> Maxween Limited</h2></a>
+            <a class="navbar-brand" href="{{url('/')}}"> <h1 class="text-success fw-bold"> Maxween Limited</h1></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,19 +36,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/')}}">Home</a>
+                        <a class="nav-link text-success" href="{{url('/')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/about')}}">About Us</a>
+                        <a class="nav-link text-success" href="{{url('/about')}}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/products')}}">Products</a>
+                        <a class="nav-link text-success" href="{{url('/products')}}">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link text-success" href="#">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link text-success" href="#">Contact Us</a>
                     </li>
                     <!-- <li class="nav-item ml-0 ml-lg-4">
                         <a class="nav-link btn btn-primary" href="#">Components</a>
