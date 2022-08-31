@@ -39,7 +39,7 @@
 
 <!-- Featured Start -->
 <div class="container-fluid pt-5">
-    <div class="row px-xl-5">
+    <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
             <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
                 <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
@@ -71,7 +71,7 @@
 <div class="container-fluid pt-5 pb-3">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent
             Products</span></h2>
-    <div class="row px-xl-5">
+    <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
@@ -194,7 +194,7 @@
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Flash
             sale
             Products</span></h2>
-    <div class="row px-xl-5">
+    <div class="row">
         <div class="col-md-6">
             <div class="product-offer mb-30" style="height: 300px;">
                 <img class="img-fluid" src="{{url('assets/img/Sonalika-di-50-tiger.jpg')}}" alt="">
@@ -223,7 +223,7 @@
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Top
             Viewed
             Products</span></h2>
-    <div class="row px-xl-5">
+    <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">

@@ -26,7 +26,7 @@
 
     <nav id="scrollspy" class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix"
         data-offset-top="20">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="{{url('/')}}"> <h1 class="text-success fw-bold"> Maxween Limited</h1></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
