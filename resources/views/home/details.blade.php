@@ -45,6 +45,8 @@
                 <h3 class="font-weight-semi-bold mb-4">$150.00</h3>
                 <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit
                     clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea
+                    Nonumy Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit
+                    clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea
                     Nonumy</p>
                 <div class="d-flex mb-3">
                     <strong class="text-dark mr-3">Sizes:</strong>
@@ -95,40 +97,6 @@
                             <label class="custom-control-label" for="color-5">Green</label>
                         </div>
                     </form>
-                </div>
-                <div class="d-flex align-items-center mb-4 pt-2">
-                    <div class="input-group quantity mr-3" style="width: 130px;">
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-minus">
-                                <i class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                        <input type="text" class="form-control bg-secondary border-0 text-center" value="1">
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-plus">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To
-                        Cart</button>
-                </div>
-                <div class="d-flex pt-2">
-                    <strong class="text-dark mr-2">Share on:</strong>
-                    <div class="d-inline-flex">
-                        <a class="text-dark px-2" href="">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-dark px-2" href="">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="text-dark px-2" href="">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="text-dark px-2" href="">
-                            <i class="fab fa-pinterest"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
