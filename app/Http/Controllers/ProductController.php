@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\Productimage;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class ProductController extends Controller
 {
@@ -15,7 +19,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.index');
+        $allproduct = Product::all();
+        // dd($allproduct);
+        return view('product.index',compact('allproduct'))->with('user',Auth::user());
     }
 
     /**
@@ -25,7 +31,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view("product.create")->with('user',Auth::user());
     }
 
     /**
@@ -36,7 +42,43 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+        // dd($request);
+        $p = new Product();
+        $p->name = $request->name;
+        $p->description = $request->description;
+        $p->regular_price = $request->regular_price;
+        $p->price = $request->price;
+        if($p->save()){
+            if($request->file('image')){
+                for ($i=0; $i < count($request->file('image')); $i++) { 
+                    // $path = $request->file('image')[$i];
+                    $path = $request->file('image')[$i]->store('public/products');
+                    $storagepath = Storage::path($path);
+                    $img = Image::make($storagepath);
+            
+                    // resize image instance
+                    $img->resize(500, 500);
+            
+                    // insert a watermark
+                    // $img->insert('public/watermark.png');
+            
+                    // save image in desired format
+                    $img->save($storagepath);
+                    $pi = new Productimage();
+                    $pi->product_id = $p->id;
+                    $pi->name = $path;              
+                    $pi->save();
+                }
+            }
+            else{
+                return back()->with('message','Product image not found');
+            }
+            return back()->with('message','Product ' .$p->id. ' Create Successfully!!!');
+        }
+        else{
+            return back()->with('message','Product not save');
+        }
+
     }
 
     /**
@@ -47,7 +89,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('product.show',compact('product'))->with('user',Auth::user());
     }
 
     /**
@@ -58,7 +100,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('product.edit',compact('product'));
     }
 
     /**
@@ -70,7 +112,37 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        // dd($request);
+        //upload
+        $path = $request->file('name')->store('public/products');
+        $storagepath = Storage::path($path);
+        $img = Image::make($storagepath);
+
+        // resize image instance
+        $img->resize(500, 500);
+
+        // insert a watermark
+        // $img->insert('public/watermark.png');
+
+        // save image in desired format
+        $img->save($storagepath);
+
+        if($product->image){
+            Storage::delete($product->image);
+        }
+
+        $product->name = $request->name;
+        $product->image = $path;
+        $product->description = $request->description;
+        $product->regular_price = $request->regular_price;
+        $product->price = $request->price;
+
+        if($product->save()){
+            return back()->with('message',"Update Successfully!!!");
+        }
+        else{
+            return back()->with('message',"Update Failed!!!");
+        }
     }
 
     /**
@@ -81,6 +153,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        // dd($product->slug);
+        if(Product::destroy($product->slug)){
+            return back()->with('message',$product->slug. ' Deleted!!!!');
+        }
     }
 }

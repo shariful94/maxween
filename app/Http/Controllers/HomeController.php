@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,11 +18,15 @@ class HomeController extends Controller
     }
     public function product()
     {
-        return view('home.product');
+        $products = Product::with('productimages')->get();
+        // dd($products->productimages);
+        return view('home.product', compact('products'));
     }
-    public function productdetails()
+
+    public function productdetails($slug)
     {
-        return view('home.details');
+        $product = Product::where('slug',$slug)->first();
+       return view('home.details',compact('product'));
     }
 
     /**

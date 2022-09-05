@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} | @yield('pagetitle')</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{url('assets/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -198,9 +198,10 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{url('assets/js/admin.min.js')}}"></script>
-
     <script>
-
+        $(document).ready( function () {
+        $('#dataTable').DataTable();
+        });
     </script>
 
     @yield('script')

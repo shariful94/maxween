@@ -2,6 +2,10 @@
 
 @section('content')
 
+@section('pagetitle')
+    Dashboard
+@endsection
+
 <h1>Wellcome to maxween dashboard</h1>
 
 <div class="row">    

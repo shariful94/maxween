@@ -1,278 +1,96 @@
-@extends('layouts.light')
-<!-- Products Start -->
+@extends('layouts.admin')
 
-<div class="container-fluid mt-5 pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent
-            Products</span></h2>
-    <div class="row px-xl-5">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="detail.html">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-2.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-2.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Products End -->
+@section('pagetitle')
+    Product
+@endsection
 
-
-<!-- Offer Start -->
-<div class="container-fluid pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Flash
-            sale
-            Products</span></h2>
-    <div class="row px-xl-5">
-        <div class="col-md-6">
-            <div class="product-offer mb-30" style="height: 300px;">
-                <img class="img-fluid" src="{{url('assets/img/Sonalika-di-50-tiger.jpg')}}" alt="">
-                <div class="offer-text">
-                    <h3 class="text-white mb-3">Flash sale</h3>
-                    <h6 class="text-white text-uppercase">Save up to 50%</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="product-offer mb-30" style="height: 300px;">
-                <img class="img-fluid" src="{{url('assets/img/1652260013286.jpg')}}" alt="">
-                <div class="offer-text">
-                    <h3 class="text-white mb-3">Flash sale</h3>
-                    <h6 class="text-white text-uppercase">Save up to 50%</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Offer End -->
-
-
-<!-- Products Start -->
-<div class="container-fluid pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Top
-            Viewed
-            Products</span></h2>
-    <div class="row px-xl-5">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{url('assets/img/product-1.jpg')}}" alt="">
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5>
-                        <h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Products End -->
 @section('content')
-
+<div class="card card-hover shadow mb-4">
+    <!-- Card Header - Dropdown -->
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
+        <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-ellipsis-v fa-sm fa-fw text-primary"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                aria-labelledby="dropdownMenuLink">
+                {{-- <div class="dropdown-header">Dropdown Header:</div> --}}
+                <a class="dropdown-item" href="{{url('product/create')}}">
+                    <i class="fas fa-plus fa-sm fa-fw mr-2 text-primary"></i>
+                    Add
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{url('export_product_pdf')}}">
+                    <i class="fas fa-file-pdf fa-sm fa-fw mr-2 text-primary"></i>
+                    PDF
+                </a>
+                <a class="dropdown-item" href="#">
+                    <i class="fas fa-print fa-sm fa-fw mr-2 text-primary"></i>
+                    Print
+                </a>
+                <a class="dropdown-item" href="#">
+                    <i class="fas fa-file-csv fa-sm fa-fw mr-2 text-primary"></i>
+                    CSV
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Card Body -->
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Regular Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Regular Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach ($allproduct as $product)
+                    <tr>
+                        <td>{{ $product->id }}</td>
+                        <td>{{ $product->name }}</td>
+                        <td>{{ $product->description }}</td>
+                        <td>{{ $product->price }}</td>
+                        <td>{{ $product->regular_price }}</td>
+                        <td>{{ $product->status }}</td>
+                        <td class="d-flex justify-content-center">
+                            {!! Form::open(['method' => 'delete','route' => ['product.destroy', $product->slug],'id'=>'deleteform']) !!}
+                            <a href="javascript:void(0)" class="btn btn-primary btn-circle btn-sm" title="Delete" onclick="event.preventDefault();if (!confirm('Are you sure?')) return; document.getElementById('deleteform').submit();">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                            {!! Form::close() !!}
+                            <a href="{{url('product/'.$product->slug.'/edit')}}" class="btn btn-primary btn-circle btn-sm" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="{{url('product/'.$product->slug)}}" class="btn btn-primary btn-circle btn-sm" title="View">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 @endsection

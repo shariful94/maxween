@@ -17,14 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/products', [HomeController::class, 'product']);
-Route::get('/productdetails', [HomeController::class, 'productdetails']);
+Route::get('/item/{slug}', [HomeController::class, 'productdetails']);;
 
 //admin group
 Route::middleware(['auth'])->group(function () {
@@ -35,9 +31,5 @@ Route::middleware(['auth'])->group(function () {
     //product
     Route::resource('product',ProductController::class);
 });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
