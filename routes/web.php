@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
 
     //product
     Route::resource('product',ProductController::class);
+    Route::get('/changestatus', [ProductController::class, 'changestatus']);
 });
 
 require __DIR__.'/auth.php';

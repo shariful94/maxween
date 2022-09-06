@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Models\Productimage;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
@@ -45,7 +46,9 @@ class ProductController extends Controller
         // dd($request);
         $p = new Product();
         $p->name = $request->name;
+        $p->feature = $request->feature;
         $p->description = $request->description;
+        $p->information = $request->information;
         $p->regular_price = $request->regular_price;
         $p->price = $request->price;
         if($p->save()){
@@ -133,7 +136,9 @@ class ProductController extends Controller
 
         $product->name = $request->name;
         $product->image = $path;
+        $product->feature = $request->feature;
         $product->description = $request->description;
+        $product->information = $request->information;
         $product->regular_price = $request->regular_price;
         $product->price = $request->price;
 
@@ -156,6 +161,19 @@ class ProductController extends Controller
         // dd($product->slug);
         if(Product::destroy($product->slug)){
             return back()->with('message',$product->slug. ' Deleted!!!!');
+        }
+    }
+
+    public function changeStatus(UpdateProductRequest $request, Product $product)
+    {
+        // dd($request);
+        $product->status = $request->status;
+        
+        if($product->save()){
+            return back()->with('message',"Update Successfully!!!");
+        }
+        else{
+            return back()->with('message',"Update Failed!!!");
         }
     }
 }

@@ -35,6 +35,7 @@
                 <h3>{{$product->name}}</h3>
                 <div class="d-flex mb-3">
                     <h3 class="font-weight-semi-bold mb-4">৳ {{$product->price}}</h3>
+                    <p class="mb-4">{{$product->feature}}</p>
                     {{-- <div class="product-info">Price: <strong>121000 ৳</strong></div> --}}
                     <div class="product-info">Regular Price: ৳ <strong>{{$product->regular_price}}</strong></div>
                 </div>
@@ -45,8 +46,8 @@
                 <div class="bg-light p-30">
                     <div class="nav nav-tabs mb-4">
                         <a class="nav-item nav-link text-dark active" data-toggle="tab" href="#tab-pane-1">Description</a>
-                        {{-- <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-2">Information</a>
-                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-3">Reviews (0)</a> --}}
+                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-2">Information</a>
+                        {{-- <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-3">Reviews (0)</a> --}}
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="tab-pane-1">

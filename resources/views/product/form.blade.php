@@ -5,7 +5,13 @@
     {!! Form::text('name', null, ['required', 'class'=>'form-control form-control-profile', 'id'=>'name', 'placeholder'=>'Name']) !!}
 </div>
 <div class="form-group">
+    {!! Form::textarea('feature', null, ['required', 'class'=>'form-control form-control-textarea', 'id'=>'feature', 'placeholder'=>'Feature']) !!}
+</div>
+<div class="form-group">
     {!! Form::textarea('description', null, ['required', 'class'=>'form-control form-control-textarea', 'id'=>'description', 'placeholder'=>'Description']) !!}
+</div>
+<div class="form-group">
+    {!! Form::textarea('information', null, ['required', 'class'=>'form-control form-control-textarea', 'id'=>'information', 'placeholder'=>'Information']) !!}
 </div>
 <div class="form-group row">
     <div class="col-sm-4 mb-3 mb-sm-0">

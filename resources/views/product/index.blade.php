@@ -71,7 +71,10 @@
                         <td>{{ $product->description }}</td>
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->regular_price }}</td>
-                        <td>{{ $product->status }}</td>
+                        <td>
+                            {{ $product->status }}
+                            <button class="btn btn-primary btn-sm">On/Off</button>
+                        </td>
                         <td class="d-flex justify-content-center">
                             {!! Form::open(['method' => 'delete','route' => ['product.destroy', $product->slug],'id'=>'deleteform']) !!}
                             <a href="javascript:void(0)" class="btn btn-primary btn-circle btn-sm" title="Delete" onclick="event.preventDefault();if (!confirm('Are you sure?')) return; document.getElementById('deleteform').submit();">
@@ -92,5 +95,10 @@
         </div>
     </div>
 </div>
+@endsection
 
+@section('script')
+<script>
+
+</script>
 @endsection

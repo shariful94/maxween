@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug','60');
+            $table->text('feature');
             $table->text('description');
+            $table->text('information');
             $table->decimal('price');
             $table->decimal('regular_price');
             $table->set('status',['1','2'])->default('1');
