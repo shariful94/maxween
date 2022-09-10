@@ -48,7 +48,7 @@
                         <a class="nav-link text-success" href="{{url('/galleries')}}">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-success" href="#">Contact Us</a>
+                        <a class="nav-link text-success" href="{{url('/contact')}}">Contact Us</a>
                     </li>
                     <!-- <li class="nav-item ml-0 ml-lg-4">
                         <a class="nav-link btn btn-primary" href="#">Components</a>
@@ -103,9 +103,7 @@
         <div class="row border-top mx-xl-5 py-4 m-5" style="border-color: rgba(256, 256, 256, .1) !important;">
             <div class="col-md-6 px-xl-0">
                 <p class="mb-md-0 text-center text-md-left text-secondary">
-                    &copy; <a class="text-primary" href="#">Maxween</a>. All Rights Reserved. Designed
-                    by
-                    <a class="text-primary" href="#">CrackIT Limited</a>
+                    &copy; <a class="text-primary" href="#">Maxween</a>. All Rights Reserved. Develop by <a class="text-primary" href="https://crackit-bd.com/" target="blank">CrackIT Ltd.</a>
                 </p>
             </div>
             <div class="col-md-6 px-xl-0 text-center text-md-right">

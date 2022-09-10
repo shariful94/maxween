@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug','60');
-            $table->text('feature');
-            $table->text('description');
-            $table->text('information');
-            $table->decimal('price', 18, 2);
-            $table->decimal('regular_price', 18, 2);
-            $table->set('status',['1','0'])->default('1');
+            $table->string('name')->nullable();
+            $table->string('email');
+            $table->string('phone');
+            $table->string('subject')->nullable();
+            $table->text('message');
             $table->timestamps();
         });
     }
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('contacts');
     }
 };

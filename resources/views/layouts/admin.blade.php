@@ -54,9 +54,9 @@
             </li>
             <!-- Nav Item - Carousel -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{url('carousel')}}">
+                <a class="nav-link collapsed" href="{{url('employee')}}">
                     <i class="fas fa-photo-video"></i>
-                   <span>Carousel</span>
+                   <span>Employee</span>
                 </a>
             </li>
             <!-- Nav Item - Gallery -->
@@ -143,7 +143,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>IsDB-BISEW WDPF-49 Students | TigerCRM | Copyright &copy; {{date('Y');}} All Rights Reserved.</span>
+                        <span>Maxween | Copyright &copy; {{date('Y');}} All Rights Reserved. Develop by <a class="text-primary" href="https://crackit-bd.com/" target="blank">CrackIT Ltd.</a></span>
                     </div>
                 </div>
             </footer>

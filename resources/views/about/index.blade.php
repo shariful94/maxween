@@ -1,7 +1,25 @@
 @extends('layouts.light')
 
+@section('pagetitle')
+    About Us
+@endsection
+
 @section('content')
-<div class="container-fluid pt-5 mt-5">
+
+<!-- Breadcrumb Start -->
+<div class="container-fluid mt-5 pt-5">
+    <div class="row px-xl-5 pt-4">
+        <div class="col-12">
+            <nav class="breadcrumb bg-light mb-30">
+                <a class="breadcrumb-item text-dark" href="{{url('/')}}">Home</a>
+                <span class="breadcrumb-item active">About Us</span>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
+<div class="container">
     <h1>About Us</h1>
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quisquam ullam sint temporibus nam excepturi voluptatibus accusamus minus officiis, voluptas impedit laboriosam quas earum suscipit fuga, eius ipsa modi ad!

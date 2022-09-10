@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -22,6 +24,9 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/products', [HomeController::class, 'product']);
 Route::get('/item/{slug}', [HomeController::class, 'productdetails']);;
+Route::get('galleries', [GalleryController::class, 'home']);
+Route::get('/contact', [ContactController::class, 'index']);
+Route::post('contact', [ContactController::class, 'store'])->name('contact.store');
 
 //admin group
 Route::middleware(['auth'])->group(function () {
@@ -36,7 +41,9 @@ Route::middleware(['auth'])->group(function () {
     //gallery
     Route::resource('gallery',GalleryController::class);
     Route::post('imgdel', [GalleryController::class, 'imgDel']);
-    Route::get('galleries', [GalleryController::class, 'home']);
+
+    //employee
+    Route::resource('employee',EmployeeController::class);
 });
 
 require __DIR__.'/auth.php';
