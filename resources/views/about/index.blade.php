@@ -1,7 +1,7 @@
 @extends('layouts.light')
 
 @section('content')
-<div class="container pt-5 mt-5">
+<div class="container-fluid pt-5 mt-5">
     <h1>About Us</h1>
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quisquam ullam sint temporibus nam excepturi voluptatibus accusamus minus officiis, voluptas impedit laboriosam quas earum suscipit fuga, eius ipsa modi ad!
