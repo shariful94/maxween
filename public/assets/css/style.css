@@ -9712,3 +9712,21 @@ a.text-dark:hover, a.text-dark:focus {
     transform: translateY(-15px);
   }
 }
+
+
+/* image delete btn css*/
+.image-area {
+  position: relative;
+  width: 100%;
+  /* background: #333; */
+  border: 1px solid #f7f7f7;
+  transition: transform .3s;
+}
+.image-area:hover {
+  transform: scale(1.01);
+}
+.image-area img{
+  max-width: 100%;
+  height: auto;
+}
+/* image delete btn css end*/

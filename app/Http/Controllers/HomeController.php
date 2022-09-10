@@ -14,7 +14,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index');
+        $products = Product::with('productimages')->take('12')->get();
+        return view('home.index', compact('products'));
     }
     public function product()
     {
@@ -22,6 +23,7 @@ class HomeController extends Controller
         // dd($products->productimages);
         return view('home.product', compact('products'));
     }
+
 
     public function productdetails($slug)
     {

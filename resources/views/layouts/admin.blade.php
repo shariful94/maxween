@@ -195,12 +195,19 @@
     <!-- Page level plugins -->
     <script src="{{url('assets/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{url('assets/js/dataTables.bootstrap.min.js')}}"></script>
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="{{url('assets/js/admin.min.js')}}"></script>
     <script>
         $(document).ready( function () {
         $('#dataTable').DataTable();
+        });
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
         });
     </script>
 

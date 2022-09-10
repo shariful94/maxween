@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Gallery;
 use App\Http\Requests\StoreGalleryRequest;
 use App\Http\Requests\UpdateGalleryRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class GalleryController extends Controller
 {
@@ -15,7 +18,8 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        $allimages = Gallery::all();
+        return view('gallery.index', compact('allimages'));
     }
 
     /**
@@ -25,7 +29,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        //
+        return view("gallery.create");
     }
 
     /**
@@ -36,51 +40,51 @@ class GalleryController extends Controller
      */
     public function store(StoreGalleryRequest $request)
     {
-        //
+        if($request->file('name')){
+            for ($i=0; $i < count($request->file('name')); $i++) { 
+                // $path = $request->file('image')[$i];
+                $path = $request->file('name')[$i]->store('public/galleries');
+                $storagepath = Storage::path($path);
+                $img = Image::make($storagepath);
+        
+                // resize image instance
+                $img->resize(500, 500);
+        
+                // insert a watermark
+                // $img->insert('public/watermark.png');
+        
+                // save image in desired format
+                $img->save($storagepath);
+                $g = new Gallery();
+                $g->name = $path;
+                $g->save();
+            }
+            return back()->with('message', 'Image Uploded Successfully!!!');
+        }
+        else{
+            return back()->with('message','Image Upload Failed');
+        }
+        
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Gallery  $gallery
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Gallery $gallery)
+    public function imgDel(Request $request)
     {
-        //
+        // echo $request->id;
+        // Log::info($request);
+        if(Gallery::destroy($request->id)){
+            // if($request->name){
+            //     Storage::delete($request->name);
+            // }
+            return response()->json(['done'=> 1,'message'=>'Image Deleted']);
+        }else{
+            return response()->json(['done'=> 0,'message'=>'Image Not Deleted']);
+        }
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Gallery  $gallery
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Gallery $gallery)
+    public function home()
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateGalleryRequest  $request
-     * @param  \App\Models\Gallery  $gallery
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateGalleryRequest $request, Gallery $gallery)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Gallery  $gallery
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Gallery $gallery)
-    {
-        //
+        $allimages = Gallery::paginate(15);
+        return view('gallery.home', compact('allimages'));
     }
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="maxween business info">
     <meta name="author" content="maxween">
-    <title>{{ config('app.name', 'Laravel')}}</title>
+    <title>{{ config('app.name', 'Laravel')}} | @yield('pagetitle')</title>
 
     <!-- font icons -->
     <link rel="stylesheet" href="{{url('assets/css/themify-icons.css')}}">
@@ -45,7 +45,7 @@
                         <a class="nav-link text-success" href="{{url('/products')}}">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-success" href="#">Gallery</a>
+                        <a class="nav-link text-success" href="{{url('/galleries')}}">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-success" href="#">Contact Us</a>

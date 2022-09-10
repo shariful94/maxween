@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,11 @@ Route::middleware(['auth'])->group(function () {
     //product
     Route::resource('product',ProductController::class);
     Route::get('/changestatus', [ProductController::class, 'changestatus']);
+
+    //gallery
+    Route::resource('gallery',GalleryController::class);
+    Route::post('imgdel', [GalleryController::class, 'imgDel']);
+    Route::get('galleries', [GalleryController::class, 'home']);
 });
 
 require __DIR__.'/auth.php';

@@ -33,11 +33,14 @@
         <div class="col-lg-7 h-auto mb-30">
             <div class="h-100 bg-light p-30">
                 <h3>{{$product->name}}</h3>
+                <div class="d-flex  mt-3">
+                    <h5>&#2547; {{$product->price}}</h5><h5 class="text-muted ml-2"><del>&#2547; {{$product->regular_price}}</del></h5>
+                </div>
+                <p class="mb-4">{!!$product->feature!!}</p>
+                {{-- <div class="">Regular Price: ৳ <strong>{{$product->regular_price}}</strong></div> --}}
                 <div class="d-flex mb-3">
-                    <h3 class="font-weight-semi-bold mb-4">৳ {{$product->price}}</h3>
-                    <p class="mb-4">{{$product->feature}}</p>
-                    {{-- <div class="product-info">Price: <strong>121000 ৳</strong></div> --}}
-                    <div class="product-info">Regular Price: ৳ <strong>{{$product->regular_price}}</strong></div>
+
+
                 </div>
             </div>
         </div>
@@ -51,12 +54,12 @@
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="tab-pane-1">
-                            <h4 class="mb-3">Product Description</h4>
-                            <p>{{$product->description}}</p>
+                            {{-- <h4 class="mb-3">Product Description</h4> --}}
+                            <p>{!!$product->description!!}</p>
                         </div>
                         <div class="tab-pane fade" id="tab-pane-2">
-                            <h4 class="mb-3">Additional Information</h4>
-                            <p>{{$product->information}}</p>
+                            {{-- <h4 class="mb-3">Additional Information</h4> --}}
+                            <p>{!!$product->information!!}</p>
                         </div>
                         <div class="tab-pane fade" id="tab-pane-3">
                             <div class="row">
