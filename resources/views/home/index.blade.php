@@ -76,7 +76,7 @@
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent Products</span></h2>
     <div class="row px-xl-5">
         @foreach ($products as $product)
-            <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+            <div class="col-lg-3 col-md-6 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
                         @if ($product->productimages)
@@ -133,7 +133,7 @@
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Top Viewed Products</span></h2>
     <div class="row px-xl-5">
         @foreach ($allproducts as $product)
-            <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+            <div class="col-lg-3 col-md-6 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
                         @if ($product->productimages)

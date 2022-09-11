@@ -61,9 +61,9 @@
 
                 </div>
                 <div class="bg-light p-30 mb-3">
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>24/4, Mirpur, Dhaka-1216</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>tigereco@gmail.com</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>01234567890</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Kotchandpur, Jhenaidah, Bnagladesh</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info.maxween@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>+8801921-151616</p>
                 </div>
             </div>
         </div>

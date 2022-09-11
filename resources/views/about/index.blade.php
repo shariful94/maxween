@@ -19,9 +19,10 @@
 </div>
 <!-- Breadcrumb End -->
 
-<div class="container">
-    <h1>About Us</h1>
+<div class="container-fluid m-4">
+    <h1>About Maxween</h1>
     <p>
+        "We are the Official Distributor of Hanghca Forklift, warehouse equipment in Bangladesh. We are also the official distributor of Heli Wheel Loader in Bangladesh. We provide hand pallet, manual stacker, electric stacker, reach truck, scissor lift and all kind of warehouse material handling equipment in Bangladesh. 
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quisquam ullam sint temporibus nam excepturi voluptatibus accusamus minus officiis, voluptas impedit laboriosam quas earum suscipit fuga, eius ipsa modi ad!
         Praesentium sint eveniet ut dolor, fugit iusto, voluptate eius recusandae rerum incidunt pariatur nobis deleniti. Inventore quia, aut, sit obcaecati rem omnis nisi officiis ab voluptate similique dolorem qui ratione!
         Doloremque, excepturi? Excepturi adipisci, at pariatur nemo quas quae sint aspernatur? Dolore velit ipsa eaque sed soluta delectus incidunt officia consectetur, cum, deserunt placeat saepe maiores voluptatum alias cumque nisi.

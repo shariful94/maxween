@@ -19,11 +19,11 @@
 </div>
 <!-- Breadcrumb End -->
 
-<div class="container">
-    <h1>Galleries</h1>
+<div class="container-fluid  p-5">
+    <h1>Mazween Galleries</h1>
     <div class="row">
         @forelse ($allimages as $img)
-        <div class="col-sm-4 pb-4 image-area">
+        <div class="col-sm-3 pb-4 image-area">
           <img src="{{ url(Storage::url($img->name)) }}"  alt="Preview">
         </div>
             

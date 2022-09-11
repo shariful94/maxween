@@ -15,9 +15,8 @@
                 {{-- {{url(Storage::url($product->productimages->first()->name))}} --}}
                 <div class="carousel-inner bg-light">
                     @foreach ($product->productimages as $i=>$img)
-                    {{$i}} - 
                     <div class="carousel-item {{(!$i?'active':'')}}"> 
-                        <img class="w-100 h-100" src="{{url(Storage::url($img->name))}}" alt="Image">
+                        <img class="w-60 h-60" src="{{url(Storage::url($img->name))}}" alt="Image">
                     </div>
                     @endforeach
                 </div>
