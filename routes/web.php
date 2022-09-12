@@ -37,6 +37,7 @@ Route::middleware(['auth'])->group(function () {
     //product
     Route::resource('product',ProductController::class);
     Route::get('/changestatus', [ProductController::class, 'changestatus']);
+    Route::post('updateproductstatus', [ProductController::class, 'updateproductstatus']);
 
     //gallery
     Route::resource('gallery',GalleryController::class);

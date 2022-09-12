@@ -180,4 +180,16 @@ class ProductController extends Controller
             return back()->with('message',"Update Failed!!!");
         }
     }
+    public function updateproductstatus(Request $request){
+        // echo $request->id;
+        // Log::info($request->id);
+        $status = Product::find($request->id);
+        $status->status = $request->status;
+        if($status->save()){
+            return response()->json(['done'=> 1,'message'=>'Product Active']);
+        }else{
+            return response()->json(['done'=> 0,'message'=>'Product Inactive']);
+        }
+
+    }
 }

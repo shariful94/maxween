@@ -72,8 +72,12 @@
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->regular_price }}</td>
                         <td>
-                            {{ $product->status }}
-                            <button class="btn btn-primary btn-sm">On/Off</button>
+                           {{--  {{ $product->status }}
+                            <button class="btn btn-primary btn-sm">On/Off</button> --}}
+                            <div class="form-check form-switch text-center">
+                                {{-- <span> {{ $carousel->status }}</span> --}}
+                                <input class="form-check-input flexSwitchCheck" type="checkbox" id="flexSwitchCheckDefault" data-id="{{$product->id}}" {{($product->status == "1")?"checked":""}} />
+                            </div>
                         </td>
                         <td class="d-flex justify-content-center">
                             {!! Form::open(['method' => 'delete','route' => ['product.destroy', $product->slug],'id'=>'deleteform']) !!}
@@ -99,6 +103,28 @@
 
 @section('script')
 <script>
-
-</script>
+    $(document).ready(function () {
+        $(document).on("change",'.flexSwitchCheck',function(){
+            $status = $(this).is(':checked')?"1":"0";
+            // console.log($status);
+            $.ajax({
+                type: "post",
+                url: "{{url('updateproductstatus')}}",
+                data: {
+                    status : $status,
+                    id: $(this).data('id')
+                },
+                success: function (response) {
+                    if(response.done = 1){
+                        // alert(response.message);
+                        //location.reload();
+                    }else{
+                        alert(response.message);
+                    }
+                }
+            });
+            // console.log($(this).is(':checked') + ":" + $(this).data('id'));
+        })
+    });
+    </script>
 @endsection
