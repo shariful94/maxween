@@ -37,16 +37,17 @@
   <tr>
     <th>#</th>
     <th>Name</th>
-    <th>Features</th>
-    <th>Purchase Price</th>
+    <th>Description</th>
     <th>Price</th>
   </tr>
+  @php
+  $sl = 1;
+  @endphp
   @foreach ($allproduct as $product)
   <tr>
-    <td>{{$product->id}}</td>
+    <td>{{$sl++}}</td>
     <td>{{$product->name}}</td>
-    <td>{{$product->feature}}</td>
-    <td>{{$product->purchase_price}}</td>
+    <td>{{$product->description}}</td>
     <td>{{$product->price}}</td>
   </tr>
   @endforeach

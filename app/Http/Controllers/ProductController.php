@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use PDF;
 
 class ProductController extends Controller
 {
@@ -191,5 +192,12 @@ class ProductController extends Controller
             return response()->json(['done'=> 0,'message'=>'Product Inactive']);
         }
 
+    }
+    public function export_product_pdf()
+    {
+        $allproduct = Product::get();
+        $pdf = PDF::loadView('product.pdf',compact('allproduct'));
+        // $pdf = PDF::loadView('supplier.pdf');
+        return $pdf->download('Productlist.pdf');
     }
 }
