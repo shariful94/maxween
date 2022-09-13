@@ -197,7 +197,6 @@ class ProductController extends Controller
     {
         $allproduct = Product::get();
         $pdf = PDF::loadView('product.pdf',compact('allproduct'));
-        // $pdf = PDF::loadView('supplier.pdf');
         return $pdf->download('Productlist.pdf');
     }
 }

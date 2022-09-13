@@ -14,13 +14,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::with('productimages')->take('12')->get();
-        $allproducts = Product::with('productimages')->take('12')->orderBy('id','Desc')->get();
+        // $allproduct = Product::where('status', '1')->get();
+        $products = Product::with('productimages')->where('status', '1')->take('12')->get();
+        $allproducts = Product::with('productimages')->where('status', '1')->take('12')->orderBy('id','Desc')->get();
         return view('home.index', compact('products'))->with(compact('allproducts'));
     }
     public function product()
     {
-        $products = Product::with('productimages')->get();
+        $products = Product::with('productimages')->where('status', '1')->get();
         // dd($products->productimages);
         return view('home.product', compact('products'));
     }
