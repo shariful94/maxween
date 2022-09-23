@@ -57,7 +57,9 @@
             </div>
             <div class="col-lg-5 mb-5">
                 <div class="bg-light p-30 mb-30">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58403.623580669795!2d90.32726083971635!3d23.810544424350393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0c1c61277db%3A0xc7d18838730e2e59!2sMirpur%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1659468598805!5m2!1sen!2sbd" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14645.831081827457!2d89.00183196409701!3d23.407825347985792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fed8c8dedda3d9%3A0xcbe5066e5b759a4a!2sKotchandpur!5e0!3m2!1sen!2sbd!4v1663946638594!5m2!1sen!2sbd" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58403.623580669795!2d90.32726083971635!3d23.810544424350393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0c1c61277db%3A0xc7d18838730e2e59!2sMirpur%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1659468598805!5m2!1sen!2sbd" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
 
                 </div>
                 <div class="bg-light p-30 mb-3">

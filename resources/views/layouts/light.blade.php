@@ -84,8 +84,8 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Contact</h5>
                         <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info.maxween@gmail.com</p>
-                        <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+01921-151616</p>
-                        <p class="mb-0"><i class="fa fa-mobile-alt text-primary mr-3"></i>+01921-151617</p>
+                        <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+8801921-151616</p>
+                        <p class="mb-0"><i class="fa fa-mobile-alt text-primary mr-3"></i>+8801921-151617</p>
                     </div>
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Business Hours</h5>

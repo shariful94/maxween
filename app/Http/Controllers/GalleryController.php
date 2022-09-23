@@ -84,7 +84,7 @@ class GalleryController extends Controller
 
     public function home()
     {
-        $allimages = Gallery::paginate(15);
+        $allimages = Gallery::paginate(16);
         return view('gallery.home', compact('allimages'));
     }
 }
